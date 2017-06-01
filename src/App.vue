@@ -7,7 +7,7 @@
         </span>
       </div>
       <div class="toolbar__center toolbar--material__center">
-        Title
+        Nearby
       </div>
       <div class="toolbar__right toolbar--material__right">
         <span class="toolbar-button toolbar-button--material">
