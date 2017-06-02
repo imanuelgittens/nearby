@@ -1,14 +1,37 @@
-<template id="main">
-  <v-ons-page>
-    <v-ons-toolbar>
-      <div class="center">Form</div>
-    </v-ons-toolbar>
-    <div style="text-align: center; margin-top: 30px;">
-      <p><v-ons-input type="text" placeholder="Username" float></v-ons-input></p>
-      <p><v-ons-input type="password" placeholder="Password" float></v-ons-input></p>
-      <p><v-ons-button>Sign in</v-ons-button></p>
-    </div>
-  </v-ons-page>
+<template>
+  <v-ons-splitter>
+    <v-ons-splitter-side swipeable width="150px" collapse="" side="left">
+      <v-ons-page>
+        <v-ons-list>
+          <v-ons-list-header>Search Categories</v-ons-list-header>
+          <v-ons-list-item>ATMs</v-ons-list-item>
+          <v-ons-list-item>Item B</v-ons-list-item>
+        </v-ons-list>
+      </v-ons-page>
+    </v-ons-splitter-side>
+    <v-ons-splitter-content>
+      <v-ons-page>
+        <v-ons-toolbar>
+          <div class="left">
+            <v-ons-toolbar-button>
+              <v-ons-icon icon="ion-navicon, material: md-menu"></v-ons-icon>
+            </v-ons-toolbar-button>
+          </div>
+          <div class="center">Findrr</div>
+          <div class="right">
+            
+          </div>
+        </v-ons-toolbar>
+
+        <p style="text-align: center">
+          <v-ons-button @click="$ons.notification.alert('Hello World!')">
+            Click me!
+          </v-ons-button>
+        </p>
+      </v-ons-page>
+    </v-ons-splitter-content>
+  </v-ons-splitter>
+  
 </template>
 
 <style scoped>
@@ -30,22 +53,9 @@
 </style>
 
 <script>
-  import Home from './Home.vue';
-  import ATM from './ATM.vue';
-  import Toolbar from './Toolbar.vue';
+  import Home from './pages/HomeContent.vue';
   export default {
     name: 'app-nav',
-    data() {
-      return {
-        currentPage: 'home',
-        pages: ['home', 'atm'],
-        openSide: false
-      };
-    },
-    components: {
-      home: Home,
-      atm: ATM
-    }
-
+    components: { Home }
   }
 </script>
