@@ -33,6 +33,7 @@
     "vue-loader": "^10.0.2",
     "vue-onsenui": "^2.0.0-beta.8",
     "vue-template-compiler": "^2.1.8",
+    "vue2-google-maps": "^0.7.7",
     "webpack": "^1.14.0",
     "weex-devtool": "^0.2.64",
     "weex-loader": "^0.4.1",
